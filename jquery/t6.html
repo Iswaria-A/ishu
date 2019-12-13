@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jq6</title>
+</head>
+<body>
+<button>Clicking here will see the toggling effect</button>
+<div id="box1" style="width: 90px;height: 90px;background-color: red;"></div><br>
+<div id="box2" style="width: 90px;height: 90px;background-color: blue;"></div><br>
+<div id="box3" style="width: 90px;height: 90px;background-color: yellow;"></div><br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#box1").fadeToggle();
+			$("#box2").fadeToggle("slow");
+			$("#box3").fadeToggle(3000);
+		});
+	});
+</script>
+</body>
+</html>

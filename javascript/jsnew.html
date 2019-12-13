@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<script>
+		function myFunction(){
+			 var x = document.getElementById("mySelect").value;
+			 var n1 = document.getElementById("input1").value;
+			 var n2 = document.getElementById("input2").value;
+			 if(isNaN(n1,n2)){
+                 alert("Nan");
+	             document.getElementById("demo").innerHTML = "only numbers";
+			 }else{
+
+				 if(x=="+"){
+				 	res=parseInt(n1)+parseInt(n2);
+				 }
+				 else if(x=="-"){
+				 	res=n1-n2;
+				 }
+				 else if(x=="*"){
+				 	res=n1*n2;
+				 }
+				 else if(x=="/"){
+				 	res=n1/n2;
+				 }
+	             document.getElementById("demo").innerHTML = "The result is: " + res;
+			 }
+		}
+	</script>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="text" name="" id="input2">
+<select id="mySelect" onchange="myFunction()">
+	<option>-- select--</option>
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+</select>
+<p id="demo"></p>
+</body>
+</html>

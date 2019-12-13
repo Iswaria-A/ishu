@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert Blog</title>
+</head>
+<body>
+<form action="/blog/insert-data" method="post">
+	{% csrf_token %}
+	{{ form }}
+	<input type="submit" value="Submit">
+</form>
+</body>
+</html>

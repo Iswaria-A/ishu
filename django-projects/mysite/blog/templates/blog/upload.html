@@ -1,0 +1,18 @@
+<style type="text/css">
+	.alert-success{
+		color: #0f0;
+	}
+</style>
+{% if messages %}
+	{% for message in messages %}
+	{% if message.tags %}
+		<div class=" {{ message.tags }}">{{ message }}</div>
+	{% endif %}
+	{% endfor %}
+{% endif %}
+
+<form method="POST" action="/blog/uploading" enctype="multipart/form-data">
+{%csrf_token%}
+{{form}}
+<input type="submit" name="submit" value="Upload">
+</form>

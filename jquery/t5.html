@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jq5</title>
+</head>
+<body>
+<button>Click to see the fade out effect</button>
+
+<div id="box1" style="width: 70px;height: 70px;background-color: red;"></div><br>
+<div id="box2" style="width: 70px;height: 70px;background-color: blue;"></div><br>
+<div id="box3" style="width: 70px;height: 70px;background-color: green;"></div><br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#box1").fadeOut();
+			$("#box2").fadeOut("slow");
+			$("#box3").fadeOut(3000);
+		});
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+#para {
+  color:red;
+}
+.para1 {
+  color:green;
+}
+h1{
+  color:blue;
+}
+h2,h3 {
+  color:yellow;
+}
+h1, .para1, #para {
+  font-style:italic;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 style="text-align: center;">Library Management System</h1>
+<div class="container">
+<a href="/lib/add/" class="btn btn-success" role="button">Add</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Book Name</th>
+			<th>View Book Details</th>
+			<th>Edit Option</th>
+			<th>Delete Option</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for instance in lib %}
+		<tr>
+			<td>{{instance.id}}</td>
+			<td>{{instance.name}}</td>
+			<td><a href="/lib/view/{{instance.id}}" role="button">View</a></td>
+			<td><a href="/lib/edit/{{instance.id}}" role="button">Edit</a></td>
+			<td><a href="/lib/delete/{{instance.id}}" role="button">Delete</a></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+</body>
+</html>

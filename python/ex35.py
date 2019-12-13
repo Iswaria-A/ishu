@@ -1,0 +1,3 @@
+arr=[1,2,3,4,5]
+n=3
+print("Original Array:")

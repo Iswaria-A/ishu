@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assign5</title>
+</head>
+<body>
+	<form>
+		<label>Name:</label>
+		<input type="text" id="name"><br><br>
+		<p id="name1"></p>
+		<label>Email:</label>
+		<input type="email" id="email"><br><br>
+		<p id="mail"></p>
+		<label>Password:</label>
+		<input type="password" id="password"><br><br>
+		<p id="pass1"></p>
+		<label>Confirm Password:</label>
+		<input type="password" id="confirm password" ><br><br>
+		<p id="pwd"></p>
+		<p id="pass3"></p>
+		<button id="btn">Submit</button>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn").click(function(e){
+				e.preventDefault();
+				var nam=$("#name").val();
+				var email=$("#email").val();
+				var pass=$("#password").val();
+				var confirm=$("#confirm password").val();
+				var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+
+				if (nam=="") {
+					$("#name1").html("Please enter the name");
+					$("#name1").css("color",'red');
+				}else{
+					if(nam.length<3){
+						$("#name1").html(" Enter atleast 3 characters");
+						$("#name1").css("color",'red');
+					}else{
+						if(!isNaN(nam)){
+							$("#name1").html("It should be character");
+							$("#name1").css("color",'red');
+						}else{
+							$("#name1").html("");
+						}
+					}
+				}
+				if(email==""){
+					 $("#mail").html("Please enter the email");
+					 $("#mail").css("color",'red');
+				}else{
+					if (testEmail.test(email) == false) 
+		            {
+						$("#mail").html("Enter the correct email format");
+						$("#mail").css("color",'red');
+		            }else{
+						$("#mail").html("");
+		            }
+				}
+				if(pass==""){
+					$("#pass1").html("Please enter the password");
+					$("#pass1").css("color",'red');
+				}else{
+					if(pass.length<8){
+						$("#pass1").html(" Enter atleast 8 character");
+						$("#pass1").css("color",'red');
+					}
+				}
+				if(confirm==""){
+					$("#pwd").html("Please confirm the pssword");
+					$("#pwd").css("color",'red');
+				}
+				else{
+					$("#pwd").html("");
+				}
+				if(pass=confirm){
+					$("#pass3").html("Password matched");
+				}
+				else{
+					$("#pass3").html("");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

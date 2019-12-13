@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <caption style="text-align: center;font-size: 15px;">Book Details</caption>
+  {% csrf_token %}
+  <table>
+  	<tr>
+  		<th>Book Id</th>
+  		<td>{{book.id}}</td>
+  	</tr>
+  	<tr>
+  		<th>Book Name</th>
+  		<td>{{book.name}}</td>
+  	</tr>
+  	<tr>
+  		<th>Book Author</th>
+  		<td>{{book.author_name}}</td>
+  	</tr>
+  	<tr>
+  		<th>Book Year</th>
+  		<td>{{book.year}}</td>
+  	</tr>
+  	<tr>
+  		<th>Book Price</th>
+  		<td>{{book.price}}</td>
+  	</tr>
+  </table>
+  <a href="/lib/first/" class="btn btn-success" role="button">Go Back</a>

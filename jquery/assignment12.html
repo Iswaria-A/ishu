@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todo list</title>
+	<style type="text/css">
+ol li{
+	list-style-type:none;
+	/*text-decoration: line-through;*/
+}
+.strike{
+  text-decoration: line-through;
+}
+.remove{
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+	<div style="padding-left: 500px; padding-top: 50px;">
+	<h1 style="font-size: 80px;font-family: sans-serif;color: red;opacity: 0.5;">Todo List</h1>
+	<input type="text" placeholder="What needs to be done?" style="font-size: 30px;opacity: 0.5;" id="txt-input"> 
+  <button id="btn1">click</button>
+</div>
+<div>
+	<ol>
+	</ol>
+</div>
+
+<p id="count"></p>
+<p id="countcomplete"></p>
+<p id="outputnotstrike"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+  $("#btn1").click(function(){
+  	var input=$("input").val();
+    $("ol").append("<li><input type='checkbox' class='chk'><span >"+input+"</span><button class='remove'>x</button><hr>"+"</li>");
+    $("#count").text("total items:"+$("li").length);
+  $("#txt-input").val("");
+  $("#txt-input").focus();
+  });
+
+
+   $("#btn").click(function(){
+  	$("#chk").html("Click the checkbox to complete the list items...");
+  });
+
+  $(document).on('click','.remove',function(){
+  	$(this).parent().remove();
+  	$("#count").text("total items:"+$("li").length);
+  	var strikelength=$('.strike').length;
+  	 $("#countcomplete").text("total completed items:"+strikelength);
+  });
+
+  $(document).on('click','.chk',function(){
+    $(this).next().addClass('strike');
+    var countstrike=$("li span").hasClass('strike');
+     var strikelength=$('.strike').length;
+     $("#outputnotstrike").html("pending items:"+$("li span").not('.strike').length);
+  });
+  });
+</script>
+</body>
+</html>

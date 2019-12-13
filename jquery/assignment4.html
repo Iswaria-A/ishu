@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assign4</title>
+</head>
+<body>
+<input type="text" id="num1"><br>
+<input type="text" id="num2"><br>
+<button id="Add">+</button>
+<button id="Subtract">-</button>
+<button id="Multiply">*</button>
+<button id="Divide">/</button><br>
+<input type="text" id="res">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#Add").click(function(){
+			var x=Number($("#num1").val())+Number($("#num2").val());
+			alert(x);
+			$("#res").val(x);
+		});
+		$("#Subtract").click(function(){
+            var x=Number($("#num1").val())-Number($("#num2").val());
+            $("#res").val(x);
+		});
+		$("#Multiply").click(function(){
+			var x=Number($("#num1").val())*Number($("#num2").val());
+			$("#res").val(x);
+		});
+		$("#Divide").click(function(){
+			var x=Number($("#num1").val())/Number($("#num2").val());
+			$("#res").val(x);
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assign3</title>
+</head>
+<body>
+<button>Click On</button>
+<p id="dy"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			var x=new Date();
+			var y=x.getDay();
+			if(y % 2 ==0){
+				$("#dy").text("It is an even day");
+				$("#dy").css("color",'green');
+			}
+			else{
+				$("#dy").text("It is an odd day");
+				$("#dy").css("color",'red');
+			}
+		});
+	});
+</script>
+</body>
+</html>

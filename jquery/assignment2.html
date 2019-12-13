@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assign2</title>
+</head>
+<body>
+<h2>Redirecting to another webpage...</h2>
+<a href="http://www.example.com">Example domain</a><br><br>
+<button>Click to redirect</button><br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript"> 
+	$(document).ready(function(){
+		$("button").click(function(){ 
+
+		var url="http://www.facebook.com"; 
+		 $(location).attr('href',url); 
+
+	 });
+	 }); 
+	
+</script> 
+</body>
+</html>

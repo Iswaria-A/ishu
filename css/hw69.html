@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Form</title>
+	<style type="text/css">
+		.text{
+			background-color: grey;
+			border:1px solid black;
+		}
+		.text:focus{
+			border-color:blue;
+		}
+		.password{
+			padding: 10px;
+			width: 900px;
+		}
+		/*.password:focus{
+			border-color: blue;
+		}*/
+	</style>
+</head>
+<body>
+<form>
+	Name:<br>
+	<input type="text" name="Name" class="text"><br>
+	Password:<br>
+	<input type="password" name="Password" class="password"><br>
+	<input type="checkbox" name="vehicle1" value="Bike">I have a bike
+    <br>
+    <input type="checkbox" name="vehicle2" value="Car">I have a car 
+    <br><br>
+    <div>
+    <select>
+    	<option value="Colors">Colors</option>
+    	<option value="Red">Red</option>
+    	<option value="Blue">Blue</option>
+    	<option value="Black">Black</option>
+    	<option value="Yellow">Yellow</option>
+    </select>
+</div><br>
+    <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+  <br>
+</form>
+</body>
+</html>

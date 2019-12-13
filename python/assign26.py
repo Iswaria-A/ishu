@@ -1,0 +1,5 @@
+f=open("text1.txt","a")
+f.write("This has some contents")
+f.close()
+f=open("text1.txt","r")
+print(f.read())

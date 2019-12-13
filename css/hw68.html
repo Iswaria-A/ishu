@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Attributes</title>
+	<style type="text/css">
+		a[target]{
+			background-color: yellow;
+		}
+		a[target=_blank]{
+			background-color: grey;
+		}
+		[title~=flower]{
+			border:2px solid black;
+		}
+		[class|=top]{
+			background-color: blue;
+		}
+
+		[class^=top ]{
+			background-color: yellow;
+		}
+		[class$="test"]{
+			background-color: red;
+		}
+		[class*="te"] {
+            background: yellow;
+        }
+	</style>
+</head>
+<body>
+<a href="http://www.wikipedia.org">wikipedia.org</a><br>
+<a href="https://www.mashupstack.com" target="_blank">Link Page</a><br>
+<a href="https://www.google.com/" target="_top">Google Search</a>
+<div>
+<img src="f1.jpg" title="flower" width="70px" height="80px">
+<img src="f2.jpg" title="flower" width="50px" height="60px">
+</div>
+
+<div>
+	<h1 class="top-header">Welcome</h1>
+	<p class="top-text">Hello</p>
+	<p class="topcontent">Content</p>
+</div>
+
+<div>
+	<h2 class="top-header">Coding</h2>
+	<p class="top-text">Welcome</p>
+	<p class="topcontent">Contents</p>
+</div>
+
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest">This is some text in a paragraph.</p>
+
+
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest">This is some text in a paragraph.</p>
+
+</body>
+</html>
